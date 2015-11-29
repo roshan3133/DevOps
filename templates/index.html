@@ -1,0 +1,28 @@
+ <form action="/user_operation" method="POST" >
+  Username:<br>
+  <input type="text" name="uname">
+  <br>
+  passwd:<br>
+  <input type="password" name="passwd">
+  <br>
+  ShellType:<br>
+  <input type="text" name="shell">
+  <br>
+  HomeFolder:<br>
+  <input type="text" name="home">
+  <br>
+  SudoAccess:<br>
+  <input type="radio" name="access" value="yes" checked>yes
+  <input type="radio" name="access" value="no">no
+  <br>
+  <br>
+  Action On User:
+   <select name="ops">
+    <option value="Create" >Create</option>
+    <option value="Delete" >Delete</option>
+    <option value="Modify" >Modify</option>
+  </select> 
+  <br>
+  <input type="submit" Value="Submit">
+  <b style="color:green;font-size:15px;">{{info}}</b>
+</form> 
