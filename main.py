@@ -2,11 +2,15 @@
 #===========================
 #Author : - Aniket Gole
 #===========================
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import pwd
 import commands
 import crypt
 app = Flask(__name__)
+
+@app.route("/favicon.ico")
+def favicon():
+    return render_template('index.html')
 
 @app.route("/user_operation", methods=["POST", "GET"])
 def user_operation():
@@ -80,4 +84,4 @@ def create_user(user, passwd, shell, home, sudo):
 # Main
 if __name__ == '__main__':
     #app.run(host='127.0.0.1', debug=True)
-    app.run(host='192.168.1.108', debug=True)
+    app.run()
