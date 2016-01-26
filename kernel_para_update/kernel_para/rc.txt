@@ -1,0 +1,11 @@
+echo 512 > /sys/block/sd*/queue/nr_requests
+echo 254 > /sys/block/sd*/device/queue_depth
+/sbin/blockdev --setra 1024 /dev/sd*
+
+# Disable Transparent HugePages
+if test -f /sys/kernel/mm/transparent_hugepage/enabled; then
+    echo never > /sys/kernel/mm/transparent_hugepage/enabled
+fi
+if test -f /sys/kernel/mm/transparent_hugepage/defrag; then
+    echo never > /sys/kernel/mm/transparent_hugepage/defrag
+fi

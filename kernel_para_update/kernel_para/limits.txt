@@ -1,0 +1,3 @@
+## Hadoop eats files and processes
+* - nofile 32768
+* - nproc 65536
