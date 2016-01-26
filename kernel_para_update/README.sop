@@ -1,3 +1,5 @@
+# Kernel Parameter Update
+==========================================================================
 script_copy_to_remote_server.sh script will remotely copy kernel_para dir 
 to the server which is available in iplist.txt file 
 
