@@ -1,0 +1,19 @@
+#####################
+#Author : Aniket Gole
+#Email : aniket.gole@ril.com
+#Date : 18-03-2015
+#####################
+
+This script will find below thing after execution.
+1. Will check server live or down
+2. Will check Server is ESXi
+3. Will check Server is Hyperv
+
+Usage:
+1. If you want to check all host from perticular subnet use below command.
+python get_subnet_status.py -sub 10.135.12.0/22
+
+2. If you have only one IP use below command.
+python get_subnet_status.py -ip 10.135.12.140
+
+Out put will store in file.
